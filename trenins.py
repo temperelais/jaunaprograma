@@ -1,16 +1,25 @@
-def summa(sk1, sk2):
-    skaitlis1=sk1
-    skaitlis2=sk2
-    print(skaitlis1+skaitlis2)
+def rezultats(sk1, sk2):
+    if sk1<6 and sk2<6:
+        rez = sk1*sk2
+    else:
+        rez = sk1+sk2
 
-summa(2341,200)
+    return rez
 
-print("ABCDFEGH")
+for skaitlis in range(1, 11, 2):        #range - funkcija, kas skaita skaitļus
+    for otrs in range(2, 11, 2):
+        print("pirmais skaitlis:", skaitlis,"otrais skaitlis:", otrs, "rezultāts: ", rezultats(skaitlis, otrs))
 
-pirmais = "6"
 
-print(pirmais)
+def zvaigznites1(skaits):
+    for rindasNr in range(1, skaits+1):
+        for zvaigzne in range(rindasNr):
+            print("*", end="")
+        print("")
 
-vārds = "nē"
+def zvaigznites2(skaits):
+    for rindasNr in range(1, skaits+1):
+        print("*"*rindasNr)
 
-print(pirmais + vārds)
+
+zvaigznites1(7)
